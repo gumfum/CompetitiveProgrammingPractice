@@ -6,4 +6,4 @@ CompetitiveProgrammingPractice
 - TopCoder
 - Codeforces
 - Aizu Online Judge
-- Project Euler(TBD)
+- Project Euler
