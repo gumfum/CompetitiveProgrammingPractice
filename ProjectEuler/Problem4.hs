@@ -1,0 +1,1 @@
+main = print (maximum [x*y | x <- [1..999], y <- [1..999], let s = show (x*y), s == reverse s])
