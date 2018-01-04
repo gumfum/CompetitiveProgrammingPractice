@@ -1,17 +1,8 @@
 import Data.Numbers.Primes
 import Data.List
 
-factors :: Integer -> [Integer]
-factors n = [x | x <- [1] ++ primes, n `mod` x == 0]
-
-factorization :: Integer -> [Integer]
-factorization 1 = []
-factorization x = v : factorization (x `div` v)
-  where
-    v = (factors x) !! 1
-
 hasFourDistinctPrimeFactors :: Integer -> Bool
-hasFourDistinctPrimeFactors n = length (nub (factorization n)) == 4
+hasFourDistinctPrimeFactors n = length (nub (primeFactors n)) == 4
 
 isCorrectQuadruplets :: (Integer, Integer, Integer, Integer) -> Bool
 isCorrectQuadruplets (a, b, c, d) = and [hasFourDistinctPrimeFactors a, hasFourDistinctPrimeFactors b, hasFourDistinctPrimeFactors c, hasFourDistinctPrimeFactors d]
